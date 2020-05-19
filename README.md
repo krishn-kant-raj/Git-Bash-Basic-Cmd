@@ -109,7 +109,7 @@ $ git remote add origin https://github.com/usename/planets.git
 
 Before pushing the repository you need to add a ```SSH key``` to your account.
 
-#Add SSH key
+# Add SSH key to your account
 ### You don't have need to add the SSH key again and again if you are using same email and same system. Just add it once for authentication.
 
 Paste the text below, substituting in your GitHub Enterprise email address.
@@ -160,8 +160,8 @@ If you want to see the log of your repository use ```git log ``` command.
 To get the your name used to config the repository, use command ```git config user.name```
 To get your email useed to config the repository, use command ```git config user.email```
 
-> For more details [click here](https://git-scm.com/docs/gittutorial)
+> ## For more details [click here](https://git-scm.com/docs/gittutorial)
 
-> To get more knowledge on README.md formating [click here](https://guides.github.com/features/mastering-markdown/). 
+> ## To get more knowledge on README.md formating [click here](https://guides.github.com/features/mastering-markdown/). 
 
-> You may visit this site to get more on Markdown [click here](https://medium.com/swlh/how-to-make-the-perfect-readme-md-on-github-92ed5771c061)
+> ## You may visit this site to get more on Markdown [click here](https://medium.com/swlh/how-to-make-the-perfect-readme-md-on-github-92ed5771c061)
