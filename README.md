@@ -131,7 +131,7 @@ Enter same passphrase again: [Type passphrase again]
 
 In the "Title" field, add a descriptive label for the new key. For example, if you're using a presonal computer, you might call this key "My PC".
 
-Find **Your Public key has been saved in ** ```/c/Users/your_username/.ssh/id_rsa.pub```
+Find **Your Public key has been saved in** ```/c/Users/your_username/.ssh/id_rsa.pub```
 
 copy the Publick Key path and use the command below
 ```
@@ -159,6 +159,104 @@ If you want to see the log of your repository use ```git log ``` command.
 
 To get the your name used to config the repository, use command ```git config user.name```
 To get your email useed to config the repository, use command ```git config user.email```
+
+If you have changed any thing directy in repository you need to pull first and then modify or update the files otherwise it will raise an error.
+
+Pull master repository
+```
+git pull origin master
+```
+Pull a branch 
+```
+$ git fetch origin <other-branch>
+```
+Then merge it into your current branch (I'll assume that's ```master```), and fix any merge conflicts:
+```
+$ git merge origin/other-branch
+# Fix merge conflicts, if they occur
+# Add merge conflict fixes
+$ git commit    # And commit the merge!
+```
+
+ # Basic Commands for Branching
+ To create a new branch and switch to it at the same time, you can run the ```git checkout``` command with the ```-b ``` switch:
+ ```
+ $ git checkout -b <New_branch_name>
+ ```
+ This is shorthand for creating new branch and switch to it.
+ ```
+ $ git branch <New_branch_name>
+$ git checkout <Branch_name>
+```
+Switched to master branch. Remember that whenever you need to switch to any branch commit the changes before switching.
+```
+$ git checkout master
+
+Output:
+Switched to branch 'master'
+```
+For direct commit
+```
+git commit -a -m "Commit Message"
+```
+Delete a branch afer mearging it in master
+```
+git branch -d <branch_name>
+```
+Force delete a branch. If a branch is not required any more or the same branch is available then use ```-D``` switch
+```
+git branch -D <branch_name>
+```
+# Basic Merging
+
+Suppose you’ve decided that your "new_branch" is complete and ready to be merged into your master branch. In order to do that, you’ll merge your "new_branch" into master. All you have to do is check out the branch you wish to merge into and then run the ```git merge``` command:
+```
+$ git checkout master
+Switched to branch 'master'
+$ git merge <branch_name>
+```
+# Basic Merge Conflicts
+
+Occasionally, this process doesn’t go smoothly. If you changed the same part of the same file differently in the two branches you’re merging, Git won’t be able to merge them cleanly. If you fixed a issue modified the same part of a file as the other branch, you’ll get a merge conflict that looks something like this:
+```
+$ git merge <branch_name>
+Auto-merging <fiel>
+CONFLICT (content): Merge conflict in <file>
+Automatic merge failed; fix conflicts and then commit the result.
+```
+Git hasn’t automatically created a new merge commit. It has paused the process while you resolve the conflict. If you want to see which files are unmerged at any point after a merge conflict, you can run ```git status```:
+```
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+    both modified:     <file>
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+Anything that has merge conflicts and hasn’t been resolved is listed as unmerged. Git adds standard conflict-resolution markers to the files that have conflicts, so you can open them manually and resolve those conflicts. Your file contains a section that looks something like this:
+```
+<<<<<<< HEAD:<file>
+<div id="footer">contact : email.support@github.com</div>
+=======
+<div id="footer">
+ please contact us at support@github.com
+</div>
+>>>>>>> <branch_name>:<file>
+```
+This means the version in HEAD (your master branch, because that was what you had checked out when you ran your merge command) is the top part of that block (everything above the =======), while the version in your <branch_name> looks like everything in the bottom part. In order to resolve the conflict, you have to either choose one side or the other or merge the contents yourself. For instance, you might resolve this conflict by replacing the entire block with this:
+```
+<div id="footer">
+please contact us at email.support@github.com
+</div>
+```
+
+# Referance:
+> ## Get more about Branching [click here](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 
 > ## For more details [click here](https://git-scm.com/docs/gittutorial)
 
