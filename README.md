@@ -5,7 +5,7 @@
 
 **Step 1:**  Create a Folder anywhere in your PC. 
 
-**Step 2:**  Onen thet Folder and right click in it.
+**Step 2:**  Open that Folder and right click in it.
 
 **Step 3:**  You will get an option ```Git Bash here```. Click on it. You will see a commandline prompt.
 
@@ -269,3 +269,4 @@ please contact us at email.support@github.com
 > ## To get more knowledge on README.md formating [click here](https://guides.github.com/features/mastering-markdown/). 
 
 > ## You may visit this site to get more on Markdown [click here](https://medium.com/swlh/how-to-make-the-perfect-readme-md-on-github-92ed5771c061)
+> ## Free GitHub tutorial for beginners on Udemy [click here](https://www.udemy.com/course/gitandgithub/learn/lecture/11058802#overview)
