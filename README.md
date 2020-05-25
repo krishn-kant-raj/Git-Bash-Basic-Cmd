@@ -60,8 +60,14 @@ nothing added to commit but untracked files present (use "git add" to track)
 Below command will stage all the files and  Folder
 ```
 $ git add .
+# Only the files available in present working directory and sub directory will staged.
 or
 $ git add -A
+or
+$ git add --all
+
+$ git add *
+# All files will staged except deleted file.
 ```
 
 Now check the status ```git status``` The new file: <file> will be shown in green color i.e the files are staged.
@@ -258,7 +264,7 @@ please contact us at email.support@github.com
 # Referance:
 > ## Get more about Branching [click here](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 
-> ## For more details [click here](https://git-scm.com/docs/gittutorial)
+> ## For more details on git basic [click here](https://git-scm.com/docs/gittutorial)
 
 > ## To get more knowledge on README.md formating [click here](https://guides.github.com/features/mastering-markdown/). 
 
