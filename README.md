@@ -1,4 +1,7 @@
 # Git Terminal Basic Commands
+This is an amazing repository
+So, follow the all instructions completly which is given below
+
 - [Download Git](https://git-scm.com/download/win)
 - Ckeck all ckeckbox and click on Next...
 - After installing git in your system. Follow these seteps.
